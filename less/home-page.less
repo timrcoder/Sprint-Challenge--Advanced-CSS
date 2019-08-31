@@ -1,75 +1,285 @@
+
 // Home Content
 
 .home {
 
-  .intro {
+ 
 
-    h2 {
+  .spaceWalkers-text{
+  font-size: 45px;
+  }
+}
+    .intro {
+  
+      h2 {
+        padding: @padding;
+        
+      }
+  
+      p {
+        padding:0 @padding;
+      }
+    
+    }
+    .main-header-photo {
+      border-radius: 6px;
+    }
+    
+    .visit-planets {
       padding: 15px;
     }
-
-    p {
-      padding:0 15px;
+      h3 {
+        margin-top: 11px;
+      }
+  
+      p {
+        margin-top: 13px;
+      }
+  
+    .space-images {
+      display: flex;
+      justify-content: space-around;
     }
   
-  }
-
-  .space-images {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
-    img {
-      width: 28%;
-      margin: 20px 2.5%;
-      border-radius: 20px;
-      height: 100%;
-    }
-  }
-
-  .visit-planets {
-    padding: 15px;
-
-    h3 {
-      margin-top: 11px;
-    }
-
-    p {
-      margin-top: 13px;
-    }
-  }
-
-  .walk {
-    margin-top: 60px;
-    border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
-    display: flex;
-    justify-content: center;
-
-    .walk-text {
-      width: 50%;
-
-      h3 {
-        margin-bottom: 10px;
-      }
-
-      p {
-        margin-bottom: 26px;
-      }
-
-      .btn {
+    .space-images .blast {
+      border-radius: 8px;
+      @media screen and (max-width: @phone) {
+        margin: 20px 0px 20px 0px;
+        padding: 0px 12px 0px 12px;
+        border-radius: 8px;
+            }
+  
+      @media screen and (max-width: @phone) {
+        img{
+         width: 100%;
+         border-radius: 8px;
+        display:flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        }
       }
     }
-
-    .walk-img {
-      width: 46%;
-      margin-left: 4%;
-      
-      img {
+    .btn:hover {
+      border: 2px solid cyan;
+      color: cyan;
+    }
+  
+    // ----------------       NOTE REMOVE @ 500PX     REMOVE @ 500PX
+    .space-images .sky {
+      border-radius: 8px;
+      border-radius: 8px;
+      @media screen and (max-width: @phone) {
+        display: none;
+      }
+    }
+  //  ----------------        NOTE REMOVE @ 500PX     REMOVE @ 500PX
+    .space-images .launch {
+      border-radius: 8px;
+      @media screen and (max-width: @phone) {
+        display: none;
+      }
+    }
+    .walk {
+      border-top: 1px solid @main-border-color;
+      padding: 50px 60px;
+      display: flex;
+      justify-content: center;
+      // border: 3px solid blue;
+    }
+    @media screen and (max-width: @phone) {
+      .walk {
         width: 100%;
-        height: auto;
-        border-radius: 10px;
+        display:flex;
+        flex-direction: column-reverse;
+        align-items: center;
       }
     }
+      .walk-text {
+        width: 50%;
+        // border: 3px solid red;
+      }
+      @media screen and (max-width: @phone) {
+        .walk-text {
+          width: 100%;
+        }
+      }
+  
+      @media screen and (max-width: @phone) {
+        .blast-box{
+          width: 100%;
+          border-radius: 8px;
+        }
+      }
+
+        h3 {
+          margin-bottom: 10px;
+          // border: 2px dashed green;
+        }
+  
+        p {
+          margin-bottom: 26px;
+        }
+  
+        .btn {
+          width: 100px;
+          height: 30px;
+          // padding-left: 19px;
+          padding-top: 4px;
+          font-size: 18px;
+          color: white;
+          background: black;
+          border-radius: 6px;
+          text-align: center;
+        //  padding-top: 18px;
+      }
+  
+      @media screen and (max-width: @phone) {
+        .btn {
+          width: 100%;
+          height: 50px;
+        }
+      }
+    
+      .walk-img {
+        width: 46%;
+        margin-left: 4%;
+        border-radius: 6px;
+      }
+
+  
+      @media screen and (max-width: @phone) {
+        .walk-img {
+          width: 100%;
+        }
+      }
+  
+  
+      img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+      
+                              // NOTE   CONTACT PAGE    CONTACT PAGE   CONTACT PAGE 
+
+  .contact-page-background {
+    background: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
   }
-}// home
+  .mobile-form {
+    display: none;
+  }
+
+  @media screen and (max-width: @phone) {
+     .tablet-form {
+       display:none
+     }
+     .mobile-form {
+       display: block;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+     }
+  }
+                              // NOTE    √ BOXES    √ BOXES    √ BOXES    √ BOXES
+ 
+  /* The container */
+.container-form {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-form input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-form input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-form input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-form .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+                            // NOTE   BLOG    BLOG    BLOG    BLOG    BLOG
+
+
+.aboutMeContainer{
+	margin: 20px;
+	font-size: 20px;
+	border: 1px solid brown
+	padding: 15px;
+	border-radius: 15px;
+
+}				
+.h3AboutMe {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+// NOTE  PRODUCTS     PRODUCTS    PRODUCTS     PRODUCTS
+
+.products-main-container {
+	width: 95%;
+	height: 700px;
+	border: 2px solid brown;
+	background: beige;
+}
+.products-items-container {
+	// border: 1px solid blue;
+	width: 90%;
+	height: 600px;
+	margin: 40px auto;
+	padding: 40px;
+}
+.blog-body-background {
+  background: beige;
+}

@@ -1,1 +1,25 @@
 // Mixins Here
+// Mixins Here
+
+@theme-color: teal;
+@padding: 15px;
+@animationBorder: 2px solid cyan;
+@animationColor: cyan;
+@phone: 500px;
+
+// .animation(@animationBorder, @animationColor) {
+//     border: @animationBorder;
+//     color: @animationColor
+// }
+
+
+
+
+
+.custom-layout(@justify, @align){
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+}
+// // usage
+// .custom-layout(flex-end, center);
